@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="style.css">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>	  
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Кафе</title>
+</head>
+<body>
+	<header>
+		<nav class="top-nav">
+			<div class="container">
+			  <a class="grey-text text-lighten-3" href="#!/">ЛК Пользователя</a>
+			</div>
+		</nav>
+	</header>
+	<main>
+	<div ng-view></div>
+	</main>
+	
+	<footer class="page-footer">
+		<div class="container">
+		<div class="row">
+		  <div class="col l12  s12">
+              <a class="grey-text text-lighten-3" href="#!/kitchen">Для повара</a>
+		  </div>
+		</div>
+		</div>
+	</footer>
+	<style>
+	body {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+	}
+
+	main {
+		flex: 1 0 auto;
+	}
+	</style>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	
+    <script src="bower_components/socket-io-client/socket.io.js"></script>
+    <script src="bower_components/angular-socket-io/socket.min.js"></script>
+	
+	<script src="app.js"></script>
+	<script src="Login/login.js"></script>
+	<script src="Client/client.js"></script>
+	<script src="Kitchen/kitchen.js"></script>
+	<script src="Dish/dish.js"></script>
+</body>
+</html>

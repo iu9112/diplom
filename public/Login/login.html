@@ -1,0 +1,31 @@
+<div class="container" ng-if="!isAutorized">
+<h3 class="header">Авторизация</h3>
+<div class="row">
+	<div ng-show="error" class="alert alert-danger">{{error}}</div>
+	<form class="col s12" name="auth" ng-submit="login()" role="form">
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="name" data-error="wrong" data-success="right">Ваше имя</label>			
+				<input type="text" name="name" id="name" class="validate" ng-model="name" required />
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				<label for="email" data-error="wrong" data-success="right">Email</label>
+				<input type="email" name="email" id="email" class="validate" ng-model="email" required />
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				<button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Войти</button>
+			</div>
+		</div>
+	</form>
+</div>
+</div>
+<div class="container" ng-if="isAutorized">
+<h3 class="header">Вы успешно авторизованы!</h3>
+	<div class="row">
+		<a href="/">Перейти в личный кабинет</a>
+	</div>
+</div>

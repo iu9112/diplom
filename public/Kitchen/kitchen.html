@@ -1,0 +1,25 @@
+<div class="container">
+<h3 class="header">Кухня</h3>
+	<div class="row">
+		<div class="col s5">
+			<h5>Заказанные блюда</h5>
+			<div class="row">
+				<div class="col s12" ng-repeat="order in newOrders">
+					<p>{{order.dish.title}}</p>
+					<p><a class="btn" ng-click="startCook(order._id, $index)">Начать</a></p>
+					<div class="divider"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col s5 offset-s1">
+			<h5>Готовящиеся блюда</h5>
+			<div class="row">
+				<div class="col s12" ng-repeat="order in orders">
+					<p>{{order.dish.title}}</p>
+					<p><a class="btn" ng-click="finishCook(order._id, $index)">Закончить</a></p>
+					<div class="divider"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

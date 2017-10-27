@@ -1,0 +1,22 @@
+<div class="container">
+<h3 class="header">Меню</h3>
+<div class="row">
+	<div class="col s12">
+		<p><a class="btn" href="/">На главную</a></p>
+	</div>
+	<div class="row">
+		<div class="col s12 m12 l12" ng-repeat="oneDish in dishes">
+			<div class="card small">
+			<h5 class="my_head">{{oneDish.title}}</h5>
+            <h5 class="my_head">Стоимость: {{oneDish.price}} Г.к.</h5>
+			<div class="card-action">
+				<p ng-if="checkPrice(oneDish.price);"><a class="btn" ng-click="addDish(oneDish._id)">Добавить</a></p>
+				<div ng-if="!checkPrice(oneDish.price);">
+					<p>Пополните баланс на {{ needMoney(oneDish.price)}} Г.к.</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
